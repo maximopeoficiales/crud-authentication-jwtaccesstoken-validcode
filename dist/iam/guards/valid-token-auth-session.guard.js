@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValidTokenAuthSessionGuard = void 0;
 const common_1 = require("@nestjs/common");
-const authentication_common_service_1 = require("../authentication/authentication.common.service");
+const authentication_common_service_1 = require("../authentication.common.service");
 let ValidTokenAuthSessionGuard = class ValidTokenAuthSessionGuard {
     constructor(authCommonService) {
         this.authCommonService = authCommonService;
@@ -32,7 +33,7 @@ let ValidTokenAuthSessionGuard = class ValidTokenAuthSessionGuard {
 ValidTokenAuthSessionGuard = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(authentication_common_service_1.AuthenticationCommonService)),
-    __metadata("design:paramtypes", [authentication_common_service_1.AuthenticationCommonService])
+    __metadata("design:paramtypes", [typeof (_a = typeof authentication_common_service_1.AuthenticationCommonService !== "undefined" && authentication_common_service_1.AuthenticationCommonService) === "function" ? _a : Object])
 ], ValidTokenAuthSessionGuard);
 exports.ValidTokenAuthSessionGuard = ValidTokenAuthSessionGuard;
 //# sourceMappingURL=valid-token-auth-session.guard.js.map

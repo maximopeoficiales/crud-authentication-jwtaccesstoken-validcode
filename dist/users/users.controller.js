@@ -20,11 +20,8 @@ const update_user_dto_1 = require("./dto/update-user.dto");
 const swagger_1 = require("@nestjs/swagger");
 const mongo_id_pipe_1 = require("../common/pipes/mongo-id.pipe");
 const filter_user_dto_1 = require("./dto/filter-user.dto");
-const valid_auth_guard_1 = require("../iam/guards/valid-auth.guard");
-const roles_guard_1 = require("../iam/guards/roles.guard");
 const jwt_auth_guard_1 = require("../iam/guards/jwt-auth.guard");
-const roles_model_1 = require("../iam/models/roles.model");
-const roles_decorator_1 = require("../iam/decorators/roles.decorator");
+const valid_auth_guard_1 = require("../iam/guards/valid-auth.guard");
 let UsersController = class UsersController {
     constructor(usersService) {
         this.usersService = usersService;
@@ -83,8 +80,7 @@ __decorate([
 ], UsersController.prototype, "delete", null);
 UsersController = __decorate([
     (0, swagger_1.ApiTags)("User"),
-    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, roles_guard_1.RolesGuard, valid_auth_guard_1.ValidAuthGuard),
-    (0, roles_decorator_1.Roles)(roles_model_1.Role.OWNER),
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard, valid_auth_guard_1.ValidAuthGuard),
     (0, common_1.Controller)("users"),
     __metadata("design:paramtypes", [users_service_1.UsersService])
 ], UsersController);

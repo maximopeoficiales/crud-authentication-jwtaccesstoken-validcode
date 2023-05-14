@@ -25,7 +25,7 @@ MailModule = __decorate([
                     },
                 },
                 defaults: {
-                    from: "La Colmena System <noreply@lacolmena.pe>",
+                    from: "Codigo Facil <noreply@codigofacil.dev>",
                 },
             }),
         ],

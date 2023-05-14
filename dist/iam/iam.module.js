@@ -20,7 +20,6 @@ const config_2 = require("../config");
 const auth_entity_1 = require("./entities/auth.entity");
 const local_strategy_1 = require("./strategies/local.strategy");
 const jwt_strategy_1 = require("./strategies/jwt.strategy");
-const jwtrefresh_strategy_1 = require("./strategies/jwtrefresh.strategy");
 const mail_module_1 = require("../common/providers/mail/mail.module");
 const authentication_common_service_1 = require("./authentication/authentication.common.service");
 const passport_1 = require("@nestjs/passport");
@@ -54,7 +53,7 @@ IamModule = __decorate([
                 },
             }),
         ],
-        providers: [{ provide: hashing_service_1.HashingService, useClass: bcrypt_service_1.BcryptService }, authentication_service_1.AuthenticationService, authentication_common_service_1.AuthenticationCommonService, local_strategy_1.LocalStrategy, jwt_strategy_1.JwtStrategy, jwtrefresh_strategy_1.JwtRefreshTokenStrategy],
+        providers: [{ provide: hashing_service_1.HashingService, useClass: bcrypt_service_1.BcryptService }, authentication_service_1.AuthenticationService, authentication_common_service_1.AuthenticationCommonService, local_strategy_1.LocalStrategy, jwt_strategy_1.JwtStrategy],
         controllers: [authentication_controller_1.AuthenticationController],
         exports: [authentication_service_1.AuthenticationService, authentication_common_service_1.AuthenticationCommonService],
     })
