@@ -35,5 +35,5 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 .dev.env
-.slintrc.js
+.eslintrc.js
 .prettierrc

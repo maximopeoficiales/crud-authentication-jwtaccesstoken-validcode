@@ -1,5 +1,0 @@
-export interface PayloadToken {
-    id: string;
-    role: string;
-    ip?: string;
-}
